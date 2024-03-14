@@ -19,12 +19,13 @@ resource "azurerm_storage_account" "cprimestacnt" {
 
 
 #creating container in storage account for terraform backend
-backend "azurerm" {
-      resource_group_name  = var.resourcegroup
-      storage_account_name = var.storageaccountname
-      container_name       = var.containername
-      key                  = "terraform.tfstate"
+terraform {
+  backend "azurerm" {
+    resource_group_name  = var.resourcegroup
+    storage_account_name = var.storageaccountname
+    container_name       = var.containername
+    key                  = "terraform.tfstate"
 }
-
+}
 
 
