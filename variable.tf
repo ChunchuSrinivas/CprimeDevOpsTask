@@ -12,6 +12,6 @@ variable resourcegroup {
 
 variable storageaccountname {
   type        = string
-  default     = "CprimeStorageAcnt"
+  default     = "cprimestorageacnt"
   description = "Cprime DevOps Task Storage Account"
 }
