@@ -4,6 +4,7 @@ resource "azurerm_resource_group" "myrgfrcprime" {
     location = var.location
 }
 
+
 /*
 #creating storage account to store terraform statefile as backend
 resource "azurerm_storage_account" "example" {
