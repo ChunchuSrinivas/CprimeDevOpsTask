@@ -19,6 +19,15 @@ resource "azurerm_storage_account" "cprimestacnt" {
 
 
 #creating container in storage account for terraform backend
+
+resource "azurerm_storage_container" "cprimeblobs" {
+  name                  = var.containername
+  storage_account_name  = var.storageaccountname
+  container_access_type = "private"
+}
+
+
+/*
 terraform {
   backend "azurerm" {
     resource_group_name  = "RgCprimeDevOpstask"
@@ -27,5 +36,5 @@ terraform {
     key                  = "terraform.tfstate"
 }
 }
-
+*/
 

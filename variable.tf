@@ -17,7 +17,7 @@ variable storageaccountname {
 }
 
 variable containername {
-  type	     = string
- default     = "cprimecontainer"
- description = "thisi is cprime stroage container for terraform backend"
+  type	      = string
+  default     = "cprimecontainer"
+  description = "thisi is cprime stroage container for terraform backend"
 }
