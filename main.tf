@@ -26,7 +26,7 @@ resource "azurerm_storage_container" "cprimeblobs" {
   container_access_type = "private"
 }
 
-
+/*
 terraform {
   backend "azurerm" {
     resource_group_name  = "RgCprimeDevOpstask"
@@ -35,5 +35,6 @@ terraform {
     key                  = "terraform.tfstate"
 }
 }
+*/
 
 
