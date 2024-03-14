@@ -27,14 +27,13 @@ resource "azurerm_storage_container" "cprimeblobs" {
 }
 
 
-/*
 terraform {
   backend "azurerm" {
     resource_group_name  = "RgCprimeDevOpstask"
     storage_account_name = "cprimestorageacnt"
-    container_name       = "tfstate"
+    container_name       = "cprimecontainer"
     key                  = "terraform.tfstate"
 }
 }
-*/
+
 
