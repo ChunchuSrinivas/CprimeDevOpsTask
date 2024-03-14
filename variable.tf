@@ -15,3 +15,9 @@ variable storageaccountname {
   default     = "cprimestorageacnt"
   description = "Cprime DevOps Task Storage Account"
 }
+
+variable containername {
+  type	     = string
+ default     = "cprimecontainer"
+ description = "thisi is cprime stroage container for terraform backend"
+}
