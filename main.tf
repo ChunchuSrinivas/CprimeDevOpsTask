@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "myrgfrcprime" {
-    name     = "myRgCprimeDevOpstask"
+resource "azurerm_resource_group" "rgfrcprime" {
+    name     = "RgCprimeDevOpstask"
     location = "centralindia"
 }
