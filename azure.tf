@@ -4,5 +4,4 @@ provider "azurerm" {
 	client_id       = "488b1f5c-f3b5-47e3-b9ee-9ef687d706d1"
 	client_secret   = "pyX8Q~4QFqityw2pzWDNDHtHZdnLDBt0jfga5aWd"
 	tenant_id       = "a866d2ce-a71b-47d8-8134-7e8aab72fa46"
-
 }
