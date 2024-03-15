@@ -51,7 +51,7 @@ resource "azurerm_container_registry" "acr" {
 resource "azurerm_kubernetes_cluster" "cluster" {
   name                = var.akscluster
   location            = var.location
-  resource_group_name = var.resourcegroup.
+  resource_group_name = var.resourcegroup
   
   default_node_pool {
     name       = var.aksnode
