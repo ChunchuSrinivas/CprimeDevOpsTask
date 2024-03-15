@@ -17,9 +17,9 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "RgCprimeDevOpstask"
-    storage_account_name = "cprimestorageacnt"
-    container_name       = "cprimecontainer"
+    resource_group_name  = "CprimeDevOpstaskrg"
+    storage_account_name = "cprimedevopstaskstorage"
+    container_name       = "cprimecontainerblob"
     key                  = "terraform.tfstate"
 }
 }
