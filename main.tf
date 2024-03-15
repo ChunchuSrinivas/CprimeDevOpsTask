@@ -11,6 +11,10 @@ resource "azurerm_storage_account" "stacnt" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+ 
+  depends_on =[
+    azurerm_resource_group.rg
+  ]
 
   tags = {
     environment = "dev"
@@ -24,6 +28,10 @@ resource "azurerm_storage_container" "blobs" {
   name                  = var.containername
   storage_account_name  = var.storageaccountname
   container_access_type = "private"
+
+  depends_on =[
+    azurerm_storage_account.stacnt
+  ]
 }
 
 /*
