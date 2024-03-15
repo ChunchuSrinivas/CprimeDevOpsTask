@@ -21,3 +21,9 @@ variable containername {
   default     = "cprimecontainerblob"
   description = "thisi is cprime stroage container for terraform backend"
 }
+
+variable containerregistry {
+  type        = string
+  default     = "cprimecontainer"
+  description = "this is cprime azure container registry for storing images"
+}

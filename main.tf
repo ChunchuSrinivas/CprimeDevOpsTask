@@ -34,15 +34,18 @@ resource "azurerm_storage_container" "blobs" {
   ]
 }
 
-/*
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "RgCprimeDevOpstask"
-    storage_account_name = "cprimestorageacnt"
-    container_name       = "cprimecontainer"
-    key                  = "terraform.tfstate"
+#creating azure container registry to store docker images
+resource "azurerm_container_registry" "acr" {
+  name                = var.containerregistry
+  resource_group_name = var.resourcegroup
+  location            = var.location
+  sku                 = "Premium"
+  admin_enabled       = false
+  
+  tags                = {
+    env = "dev"
+  }
+  }
 }
-}
-*/
 
 
