@@ -52,6 +52,7 @@ resource "azurerm_kubernetes_cluster" "cluster" {
   name                = var.akscluster
   location            = var.location
   resource_group_name = var.resourcegroup
+  dns_prefix          = "cprimeaks1"
   
   default_node_pool {
     name       = var.aksnode
