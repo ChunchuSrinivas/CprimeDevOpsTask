@@ -6,18 +6,18 @@ variable location {
 
 variable resourcegroup {
   type        = string
-  default     = "RgCprimeDevOpstask"
+  default     = "CprimeDevOpstaskrg"
   description = "rg name is RgCprimeDevOpstask"
 }
 
 variable storageaccountname {
   type        = string
-  default     = "cprimestorageacnt"
+  default     = "cprimedevopstaskstorage"
   description = "Cprime DevOps Task Storage Account"
 }
 
 variable containername {
   type	      = string
-  default     = "cprimecontainer"
+  default     = "cprimecontainerblob"
   description = "thisi is cprime stroage container for terraform backend"
 }

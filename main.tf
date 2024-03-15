@@ -1,11 +1,11 @@
 #Creating resource group
-resource "azurerm_resource_group" "myrgfrcprime" {
+resource "azurerm_resource_group" "rg" {
     name     = var.resourcegroup
     location = var.location
 }
 
 #creating storage account to store terraform statefile as backend
-resource "azurerm_storage_account" "cprimestacnt" {
+resource "azurerm_storage_account" "stacnt" {
   name                     = var.storageaccountname
   resource_group_name      = var.resourcegroup
   location                 = var.location
@@ -20,7 +20,7 @@ resource "azurerm_storage_account" "cprimestacnt" {
 
 #creating container in storage account for terraform backend
 
-resource "azurerm_storage_container" "cprimeblobs" {
+resource "azurerm_storage_container" "blobs" {
   name                  = var.containername
   storage_account_name  = var.storageaccountname
   container_access_type = "private"
