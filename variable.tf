@@ -27,3 +27,15 @@ variable containerregistry {
   default     = "cprimecontainer"
   description = "this is cprime azure container registry for storing images"
 }
+
+variable akscluser {
+  type        = string
+  default     = "cprimeakscluster"
+  description = "this is cprime aks cluster"
+}
+
+variable aksnode {
+  type        = string
+  default     = "cprimeaksnode"
+  description = "this cprime aks node"
+}

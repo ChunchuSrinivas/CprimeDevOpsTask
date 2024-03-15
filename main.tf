@@ -47,5 +47,33 @@ resource "azurerm_container_registry" "acr" {
   }
 }
 
+#creating aks cluster with 1 node
+resource "azurerm_kubernetes_cluster" "cluster" {
+  name                = var.akscluster
+  location            = var.location
+  resource_group_name = var.resourcegroup.
+  
+  default_node_pool {
+    name       = var.aksnode
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+   tags = {
+    env = "dev"
+  }
+}
+
+output "client_certificate" {
+  value     = azurerm_kubernetes_cluster.cluster.kube_config[0].client_certificate
+  sensitive = true
+}
+
+output "kube_config" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config_raw
+
+  sensitive = true
+}
+
 
 
