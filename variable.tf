@@ -28,7 +28,7 @@ variable containerregistry {
   description = "this is cprime azure container registry for storing images"
 }
 
-variable akscluser {
+variable akscluster {
   type        = string
   default     = "cprimeakscluster"
   description = "this is cprime aks cluster"
