@@ -36,6 +36,6 @@ variable akscluster {
 
 variable aksnode {
   type        = string
-  default     = "cprimeaksnode"
+  default     = "cprimeaksnode1"
   description = "this cprime aks node"
 }
